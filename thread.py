@@ -73,9 +73,9 @@ if __name__ == '__main__':
         if target_folder == 'exit':
             break
         else:
-            # folder_walk(target_folder)  # walk by tree, files push to Thread
-            # folders_walk(target_folder)  # walk by tree, subfolders push to Threads and files push to Thread
-            folders_pool_walk(target_folder)   # walk by tree, subfolders push to ThreadPoolExecutor and files push to thread
+            # folder_walk(target_folder)  # walk by tree, push files to Thread
+            # folders_walk(target_folder)  # walk by tree, push subfolders to Threads and push files to Thread
+            folders_pool_walk(target_folder)   # walk by tree, push subfolders to ThreadPoolExecutor and push files to thread
 
         for thread in threading.enumerate():
             if thread is not threading.main_thread():
